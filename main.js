@@ -49,8 +49,8 @@ if (width < 992) {
 }
 canvas.addEventListener('touchstart', my_touchstart);
 function my_touchstart(e) {
-    current_x = e.touches[0].clientX - offsetLeft;
-    current_y = current_y - offsetTop;
+    current_x = e.touches[0].clientX - canvas.offsetLeft;
+    current_y = e.touches[0].clientY - canvas.offsetTop;
     console.log(last_x_position, last_y_position);
     color = document.getElementById('color').value;
     line_width = document.getElementById('line_width').value;
